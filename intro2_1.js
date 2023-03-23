@@ -224,28 +224,32 @@
 //     }
 // }
 
-let scacchiera = "";
-let size = 40
-for (let x = 1; x < size; x++) {
-    for (let y = 1; y < size; y++) {
-        if (x % 2 !== 0) {
-            if (y % 2 !== 0) {
-                scacchiera += "#";
-            } else {
-                scacchiera += " ";
-            }
 
-        } else {
-            if (y % 2 !== 0) {
-                scacchiera += " ";
-            } else {
-                scacchiera += "#";
-            }
-        }
-    }
-    scacchiera += "\n"
-}
-console.log(scacchiera);
+
+// let scacchiera = "";
+// let size = 40
+// for (let x = 1; x < size; x++) {
+//     for (let y = 1; y < size; y++) {
+//         if (x % 2 !== 0) {
+//             if (y % 2 !== 0) {
+//                 scacchiera += "#";
+//             } else {
+//                 scacchiera += " ";
+//             }
+
+//         } else {
+//             if (y % 2 !== 0) {
+//                 scacchiera += " ";
+//             } else {
+//                 scacchiera += "#";
+//             }
+//         }
+//     }
+//     scacchiera+="\n"
+// }
+// console.log(scacchiera);
+
+
 
 // let scacchiera = "";
 // let size = 19;
@@ -262,4 +266,76 @@ console.log(scacchiera);
 //     };
 //     scacchiera += "\n";
 // };
+// console.log(scacchiera);
+
+//-------------------------------------------------
+//eSERCIZI FINALI
+
+// for (let i = 20; i >= 0; i-=2) {
+//     console.log(i);
+// }
+
+// for(let i= 0; i < 20; i++) {
+//     if(i % 2 === 0) {
+//         console.log(i/2);
+//     } else if (i % 3 === 0) {
+//         console.log(i**3);
+//     }else {
+//         console.log(i);
+//     }
+// }
+
+
+// let misteryNumber = 1;
+// let notFound = true;
+// while (notFound) {
+//     const multipleOf2 = misteryNumber % 2 ===0; 
+//     const multipleOf3 = misteryNumber % 3 ===0; 
+//     const multipleOf5 = misteryNumber % 5 ===0; 
+//     if (multipleOf2 && multipleOf3 && multipleOf5 ) {
+//         console.log(misteryNumber);
+//         notFound = false;
+//     } else {
+//         misteryNumber++
+//     }
+// }
+
+// let riga='#';
+// for (let i = 0; i < 7; i++) {
+//   riga +='#';
+//   console.log(riga);
+
+// }
+
+
+let rigaPari='# # # # ';
+let rigaDispari=' # # # #';
+for (let i = 0; i < 8; i++) {
+    if (i % 2 === 0) {
+        console.log(rigaPari);
+    } else {
+        console.log(rigaDispari);
+    }
+   
+}
+
+// let scacchiera= '';
+// for (let y = 0; y < 16 ; y++) {
+//     for (let x = 0; x < 16; x++) {
+//         if (y % 2 === 0){
+//             if (x % 2 === 0) {
+//                 scacchiera+='#';
+//             } else {
+//                 scacchiera+=' ';
+//             }
+//         } else {
+//             if (x % 2 === 0){
+//                 scacchiera+=' ';
+//             } else{
+//                 scacchiera+='#';
+//             }
+//         }
+        
+//     }scacchiera+='\n';
+// }
 // console.log(scacchiera);
