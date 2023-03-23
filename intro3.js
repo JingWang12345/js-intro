@@ -345,3 +345,20 @@ function convertToPositive(number) {
 console.log(convertToPositive(10)) //10
 console.log(convertToPositive(-20)) //20
 
+
+
+// for (let i = 0; i < 20; i+=2) {
+//     console.log(i);
+// }
+
+
+function printOddUntilTerm(start, term) {
+    if (start>term) {
+        return;
+    } else {
+        console.log(start);
+        printOddUntilTerm(start+2,term);
+    }
+}
+
+printOddUntilTerm(0, 20);
