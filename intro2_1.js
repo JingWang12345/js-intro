@@ -243,7 +243,7 @@ for (let x = 1; x < size; x++) {
             }
         }
     }
-    scacchiera+="\n"
+    scacchiera += "\n"
 }
 console.log(scacchiera);
 
