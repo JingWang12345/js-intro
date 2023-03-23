@@ -131,59 +131,217 @@
 //esercizi
 // 1) scrivere una funzione che dato un numero se è positivo lo moltiplichi per due 
 
-// function moltiplichi (numero ){ 
-//    if (numero >= 0 ) {
-//     const risultato = numero * 2;
-//     return risultato;
-//  }  
-//    }console.log(moltiplichi(3))
 
+function multiplyBy2(number) {
+    if (number >= 0) {
+        return number * 2;
+    }
+    return number;
+}
 
+const multiplyBy2Lambda = (number) => {
+    if (number >= 0) {
+        return number * 2;
+    }
+    return number;
+}
+
+console.log(multiplyBy2(3));
+console.log(multiplyBy2(-3));
+console.log(multiplyBy2(0));
+console.log(multiplyBy2(300));
+
+console.log(multiplyBy2Lambda(20));
+console.log(multiplyBy2Lambda(-300));
 
 
 // 2) scrivere una funzione che dato un stringa restituisca la sua versione maiuscola
 
-// function textMaiuscola(text) {
-//     const risultato = text.toUpperCase();
-//     return risultato;
-//     }
-// console.log(textMaiuscola("text"))
-// 3) scrivere una funzione che dato un stringa mi restituisca vero se è più lunga di 10 caratteri altrimenti restituisca falso
-//  let risultato = "";
-function stringa(caratteri) {
-    if (caratteri.length > 10) {
-     
-        return "vero";
-    } else {
-      
-        return "falso";
-    }
 
-} console.log(stringa("ciaociaociaociao"));
-// 4) scrivere una funzione pura che restituisca la scacchiera
-function skacchiera(i){
-    let scacchiera= '';
-for (let y = 0; y < 16 ; y++) {
-    for (let x = 0; x < 16; x++) {
-        if (y % 2 === 0){
-            if (x % 2 === 0) {
-                scacchiera+='#';
-            } else {
-                scacchiera+=' ';
-            }
-        } else {
-            if (x % 2 === 0){
-                scacchiera+=' ';
-            } else{
-                scacchiera+='#';
-            }
-        }
-        
-    }scacchiera+='\n';
+function textToUpperCase(text) {
+    return text.toUpperCase();
 }
-return scacchiera;
-}console.log(skacchiera(1));
-// 5) scrivere una funzione che dato un numero restituisca una stringa con la logica FizzBuzz
+
+const textToUpperCaseLambda = (text) => text.toUpperCase();
+
+console.log(textToUpperCase('ciao'));
+console.log(textToUpperCase('pippo'));
+console.log(textToUpperCaseLambda('ciao ciao'));
+console.log(textToUpperCaseLambda('Jing'));
+
+// 3) scrivere una funzione che dato un stringa mi restituisca vero se è più lunga di 10 caratteri altrimenti restituisca falso
+
+function isMoreThan10Char(text) {
+    if (text.length > 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const isMoreThan10ChanLambda = (text) => {
+    if (text.length > 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isMoreThan10Char('la casa rosa vicino al fiume'));
+console.log(isMoreThan10Char('focaccia'));
+console.log(isMoreThan10Char('la mamma è cattiva'));
+console.log(isMoreThan10Char('pulcino'));
+
+
+// 4) scrivere una funzione pura che restituisca la scacchiera
+
+function buildChessBoardWithHashtag(size) {
+    let scacchiera = '';
+    for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+            if (y % 2 === 0) {
+                if (x % 2 === 0) {
+                    scacchiera += '#';
+                } else {
+                    scacchiera += ' ';
+                }
+            } else {
+                if (x % 2 === 0) {
+                    scacchiera += ' ';
+                } else {
+                    scacchiera += '#';
+                }
+            }
+
+        } scacchiera += '\n';
+    }
+    return scacchiera;
+}
+
+const buildChessBoardWithHashtagLambda = (size) => {
+    let scacchiera = '';
+    for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+            if (y % 2 === 0) {
+                if (x % 2 === 0) {
+                    scacchiera += '#';
+                } else {
+                    scacchiera += ' ';
+                }
+            } else {
+                if (x % 2 === 0) {
+                    scacchiera += ' ';
+                } else {
+                    scacchiera += '#';
+                }
+            }
+
+        } scacchiera += '\n';
+    }
+    return scacchiera;
+}
+
+
+console.log(buildChessBoardWithHashtag(3));
+console.log(buildChessBoardWithHashtag(13));
+console.log(buildChessBoardWithHashtag(30));
+//5) scrivere una funzione che dato un numero restituisca una stringa con la logica FizzBuzz
+
+function transformNumberInFizzBuzz(number) {
+    if (number % 3 === 0 && number % 5 === 0) {
+        return "FIzzBuzz";
+    } else if (number % 5 === 0){
+        return "Buzz";
+    } else if (number % 3 === 0){
+        return "FIzz";
+    } else {
+        return number;
+    }
+}
+
+const transformNumberInFizzBuzzLambda = (number) => {
+    if (number % 3 === 0 && number % 5 === 0) {
+        return "FIzzBuzz";
+    } else if (number % 5 === 0){
+        return "Buzz";
+    } else if (number % 3 === 0){
+        return "FIzz";
+    } else {
+        return number;
+    }
+}
+
+
+console.log(transformNumberInFizzBuzz(3));
+console.log(transformNumberInFizzBuzz(10));
+console.log(transformNumberInFizzBuzz(15));
+console.log(transformNumberInFizzBuzz(8));
+
 // 6) scrivere una funzione che data una stringa restituisca una stringa composta solo dai caratteri dispari dell'originale
 
+function onlyOddChars(text) {
+    let result = "";
+    for (let i = 0; i < text.length; i++) {
+        if (i % 2 !== 0) {
+            result += text[i];
+        }
+    }
+    return result;
+}
+
+const onlyOddCharsLambda = (text) => {
+    let result = "";
+    for (let i = 0; i < text.length; i++) {
+        if (i % 2 !== 0) {
+            result += text[i];
+        }
+    }
+    return result;
+}  
+
+
+
+console.log(onlyOddChars('Jing')) // ig
+console.log(onlyOddChars('Andrea')) // nra
+console.log(onlyOddChars('raviolo')) // ail
+                        //0123456
+
+console.log(onlyOddChars('Jing è brava in informatica'))
+
+
+//--------------------------------------------------
+function min(number1, number2) {
+    if (number1>number2) {
+        return number2;
+    } else {
+        return number1;
+    }
+}
+
+const minLambda = (number1, number2) => {
+    if (number1>number2) {
+        return number2;
+    } else {
+        return number1;
+    } 
+}
+
+console.log(min(0, 10));
+console.log(min(0, -10));
+
+
+//---------------------------------------------------
+
+function convertToPositive(number) {
+    if (number>=0) {
+        return number;
+    } else {
+        return number*-1;
+    }
+}
+
+
+
+console.log(convertToPositive(10)) //10
+console.log(convertToPositive(-20)) //20
 
