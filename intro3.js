@@ -184,6 +184,8 @@ for (let y = 0; y < 16 ; y++) {
 return scacchiera;
 }console.log(skacchiera(1));
 // 5) scrivere una funzione che dato un numero restituisca una stringa con la logica FizzBuzz
+
+
 // 6) scrivere una funzione che data una stringa restituisca una stringa composta solo dai caratteri dispari dell'originale
 
 
