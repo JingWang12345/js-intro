@@ -60,6 +60,8 @@ printArrayInFizzBuzzLogic(pippo)
 //2) scrivere una funzione che prende come parametro un array di
 //   stringhe e logga quelle più piccole di 5 caratteri
 
+const pluto = [ 'case', 'armadio','getto', 'perfetto']
+
 //3) scrivere una funzione che prende come parametro una stringa e 
 //   restituisce una stringa composta dai primi 5 caratteri convertiti in 
 // maiuscolo
