@@ -379,7 +379,7 @@
 
 // function sumRange(startNumber,endNumber) {
 //     let sum= 0;
-//     for (let i = startNumber; i < endNumber; i++) {
+//     for (let i = startNumber; i <= endNumber; i++) {
 //     sum = sum +i;
         
 //     } return sum;
@@ -395,9 +395,9 @@
      // LE FUNZIONI POSSONO USARE ALTRE FUNZIONI
      
     //  function doubleAndPow3(selectedNumber) {
-    //     const double = selectedNumber * 2;
-    //     const pow3 = double ** 3;
-    //     return pow3;
+        // const double = selectedNumber * 2;
+        // const pow3 = double ** 3;
+        // return pow3;
     //-----------------------------------------------------------------
     // const double = makeDouble(selectedNumber);
     // const pow3 = makePow3(double);
@@ -463,18 +463,18 @@
 
 
 
-function isEven(selectedNumber) {
-    if(selectedNumber === 0){
-        return true;
-    }
+// function isEven(selectedNumber) {
+//     if(selectedNumber === 0){
+//         return true;
+//     }
     
-    if (selectedNumber === 1) {
-        return false;
-    }
-    const newNumber = selectedNumber -2
-    return isEven(selectedNumber-2);
-}
-console.log(isEven(0));
-console.log(isEven(1));
-console.log(isEven(3));
-console.log(isEven(8));
+//     if (selectedNumber === 1) {
+//         return false;
+//     }
+//     const newNumber = selectedNumber -2
+//     return isEven(selectedNumber-2);
+// }
+// console.log(isEven(0));
+// console.log(isEven(1));
+// console.log(isEven(3));
+// console.log(isEven(8));
