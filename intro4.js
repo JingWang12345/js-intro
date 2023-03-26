@@ -68,15 +68,14 @@ function printShorterThan5Chars(arrayOfStrings) {
         const element = arrayOfStrings[i];
 
         console.log(element);
-        if (element < 5) {
+        if (element < 4) {
+            console.log(element);
+        }
 
-        } return element;
-    
 
     }
 
 }
-
 
 
 printShorterThan5Chars(pluto)
