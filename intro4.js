@@ -61,21 +61,17 @@
 //2) scrivere una funzione che prende come parametro un array di
 //   stringhe e logga quelle più piccole di 5 caratteri
 
-const pluto = ['casa', 'armadio', 'gatto', 'perfetto', 'mano']
-function printShorterThan5Chars(arrayOfStrings) {
+const pluto= ['casa', 'armadio', 'gatto', 'perfetto', 'mano']
+function printShorterThan5Chars(pluto) {
 
-    for (let i = 0; i < arrayOfStrings.length; i++) {
-        const element = arrayOfStrings[i];
-
-        console.log(element);
-        if (element < 4) {
-            console.log(element);
+    for (let i = 0; i < pluto.length; i++) {
+      
+        if (pluto[i].length < 4) {
+            console.log(pluto[i]);
+        }
         }
 
-
-    }
-
-}
+       }
 
 
 printShorterThan5Chars(pluto)
