@@ -61,57 +61,86 @@
 //2) scrivere una funzione che prende come parametro un array di
 //   stringhe e logga quelle più piccole di 5 caratteri
 
-// const pluto = ['casa', 'armadio', 'gatto', 'perfetto', 'mano']
-// function printShorterThan5Chars(arrayOfStrings) {
-//     for (let i = 0; i < pluto.length; i++) {
-//         const element = pluto[i];
-//         if (element< 5) {
-//             console.log(element);
-//         }
-//     }
-// }
+const pluto = ['casa', 'armadio', 'gatto', 'perfetto', 'mano']
+function printShorterThan5Chars(arrayOfStrings) {
 
-// printShorterThan5Chars(pluto)
-//casa
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+        const element = arrayOfStrings[i];
+
+        console.log(element);
+        if (element < 5) {
+
+        } return element;
+    
+
+    }
+
+}
+
+
+
+printShorterThan5Chars(pluto)
+// //casa
 //mano
+
 
 
 //3) scrivere una funzione che prende come parametro una stringa e 
 //   restituisce una stringa composta dai primi 5 caratteri convertiti in maiuscolo
 
 
-function pickFirst5CharsAndMakeUpperCase(text) {
-    let result = "";
-    for (let i = 0; i < text.length; i++) {
-        if (i < 5) {
-            result += text[i];
-          }
-    }
-    return result;
+// function pickFirst5CharsAndMakeUpperCase(text) {
 
-}
+//     let result = "";
+
+//     for (let i = 0; i < text.length; i++) {
+//         if (i < 5) {
+//             result += text[i];
+//         }
+//     }
+//     return result;
+//     result = textUpperCase;
+
+// }
 
 
 
 
 
 
-console.log(pickFirst5CharsAndMakeUpperCase('deltaplano')) //DELTA
+
+// console.log(pickFirst5CharsAndMakeUpperCase('deltaplano')) //DELTA
 
 //4) scrivere una funzione che prende come parametro una stringa e
 //restituisce la lunghezza della stringa senza spazi
-function lengthOfTextWithoutSpaces(text) {
-    
-}
+// function lengthOfTextWithoutSpaces(text) {
+//     countText = 0;
 
-console.log(lengthOfTextWithoutSpaces('il nano enorme')) //12
+//     for (let i = 0; i < text.length; i++) {
+//         const element = text[i];
+//         if (text[i] !== ' ') {
+//             countText++;
+//         } 
+//     }return countText
+// }
+
+
+// console.log(lengthOfTextWithoutSpaces('il nano enorme')) //12
+
+
 
 //5)scrivere una funzione che prende come parametro una stringa e
 // restituisce il numero degli spazi
 
 
-function countSpaces(text) {
-    
-}
+// function countSpaces(text) {
+//     count = 0
+//     for (let i = 0; i < text.length; i++) {
+//         const element = text[i];
+//         if (text[i] === ' ') {
+//             count++;
+//         }
+//     }return count
+// }
 
-console.log(countSpaces('il nano enorme')) //2
+// console.log(countSpaces('il nano enorme')) //2
