@@ -81,7 +81,7 @@
 
 // const daniele = {
 //     name: 'Daniele',
-//     surname: 'puggioni',
+//     surname: 'Puggioni',
 //     yob: 1999,
 //     nickname: 'Pooh',
 //     email: 'danielepuggioni@gmail.com'
@@ -90,7 +90,7 @@
         
 // const francesco = {
 //     name: 'Francesco',
-//     surname: 'badile',
+//     surname: 'Badile',
 //     yob: 1993,
 //     nickname: 'SunshineMocha',
 //     email: 'sunshinemocha@gmail.com'
@@ -126,7 +126,7 @@
         
 // const valentina = {
 //     name: 'Valentina',
-//     surname: 'cherubini',
+//     surname: 'Cherubini',
 //     yob: 2001,
 //     nickname: 'dalila',
 //     email: 'dallila@gmail.com'
@@ -143,7 +143,7 @@
 
 // const davide = {
 //     name: 'Davide',
-//     surname: 'consigliere',
+//     surname: 'Consigliere',
 //             yob: 1989,
 //             nickname: 'dave',
 //             email: 'david@gmail.com'
@@ -153,15 +153,15 @@
 
 // for (let i = 0; i < myClass.length; i++) {  
 //     const person = myClass[i];
-    // const description =
-    // `Nome: ${person.name} ${person.surname} (${person.nickname})
-    // ETA': ${2023 - person.yob}
-    // Email: ${personalbar.email}`
-    // console.log(description)
+//     const description =
+//     `Nome: ${person.name} ${person.surname} (${person.nickname})
+//     ETA': ${2023 - person.yob}
+//     Email: ${personalbar.email}`
+//     console.log(description)
 
     
 //     console.log('NOME: ' + person.name + ' ' + person.surname + ' (' + person.nickname + ')\n'
-//                 + ETA\': ' +(2023 -person.yob) + '\n'
+//                 + 'ETA\': ' +(2023 -person.yob) + '\n'
 //                 +'EMAIL: ' + person.email)
 // }
 
@@ -337,18 +337,18 @@
 //REDUCE
 //3) creae una funzione che somma tutti gli elementi di un array di numeri
 
-const numbers = [100, -23, 0, -234, 1001, 1,34, -12];
+// const numbers = [100, -23, 0, -234, 1001, 1,34, -12];
 
-function sumAllElements(array) {
-let tempNumber = 0;
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-    tempNumber = tempNumber+element;
-}
-    return tempNumber;
-}
+// function sumAllElements(array) {
+// let tempNumber = 0;
+// for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     tempNumber = tempNumber+element;
+// }
+//     return tempNumber;
+// }
 
-console.log(sumAllElements(numbers)); //867
+// console.log(sumAllElements(numbers)); //867
 //--------------------------------------------------------------------
 //ESERCIZIO
 
