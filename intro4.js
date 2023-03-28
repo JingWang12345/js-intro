@@ -563,13 +563,14 @@
 const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
 function sumFirstChar(array){
-    let tempArray = 0;
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        tempArray = tempArray+element;
+    let tempArray = "";
+for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+   element = array.charAt(0);
+   tempArray +=array.charAt(0);
+}
     }
     return tempArray;
-}
 
 console.log(sumFirstChar(strings3)) //'pop'
 
@@ -578,13 +579,14 @@ console.log(sumFirstChar(strings3)) //'pop'
 // const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
 
 // function maxElement(array){
-// for (let i = 0; i < array.length; i++) {
+//     let max = array[0]
+// for (let i = 1; i < array.length; i++) {
 //     const element = array[i];
-//     if (a>b) {
-        
+//     if (max < array[i]) {
+//         max = array[i]
 //     }
     
-// }
+// } return max
 // }
 
 // console.log(maxElement(numbers3)) //15
