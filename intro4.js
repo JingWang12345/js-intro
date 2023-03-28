@@ -337,18 +337,18 @@
 //REDUCE
 //3) creae una funzione che somma tutti gli elementi di un array di numeri
 
-const numbers = [100, -23, 0, -234, 1001, 1,34, -12];
+// const numbers = [100, -23, 0, -234, 1001, 1,34, -12];
 
-function sumAllElements(array) {
-let tempNumber = 0;
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-    tempNumber = tempNumber+element;
-}
-    return tempNumber;
-}
+// function sumAllElements(array) {
+// let tempNumber = 0;
+// for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     tempNumber = tempNumber+element;
+// }
+//     return tempNumber;
+// }
 
-console.log(sumAllElements(numbers)); //867
+// console.log(sumAllElements(numbers)); //867
 //--------------------------------------------------------------------
 //ESERCIZIO
 
@@ -457,3 +457,26 @@ console.log(sumAllElements(numbers)); //867
 // }
 
 // console.log(countSpaces('il nano enorme')) //2
+
+
+///-------------------------------------------------------------------------------
+//ESERCIZI 27/03
+
+//1) scrivere una funzione che prende in input un array di numeri è restituisce un array di stringhe in logica FizzBuzz (map)
+
+const number = [3, 5, 15, 8, 12, 2];
+function convertArrayInFizzBuzz() {
+    
+}
+
+//2) scrivere una funzione che prende in input un array di numeri è restituisce un array di numeri in cui i positivi sono trasformati in negativi e viceversa
+
+//3) scrivere una funzione che prende in input un array di numeri è restituisce un array di numeri con la lunghezza delle stringhe
+
+//4) scrivere una funzione che prende in input un array di numeri è restituisce solo quelle che contengono la lettera z
+
+//5) scrivere una funzione che prende in input un array di numeri è restituisce tutti i numeri pari (filter)
+
+//6) scrivere una funzione che prende in input un array di stringhe restituisce una stringa 
+
+//7) 
