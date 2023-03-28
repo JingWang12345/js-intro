@@ -560,13 +560,18 @@
 
 //6) scrivere una funzione che prende in input un array di stringhe restituisce una stringa composta dalle iniziali
 //(reduce)
-// const strings3 = ['pippo', 'osvaldo', 'paperino'];
+const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
-// function sumFirstChar(array){
+function sumFirstChar(array){
+    let tempArray = 0;
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        tempArray = tempArray+element;
+    }
+    return tempArray;
+}
 
-// }
-
-// console.log(sumFirstChar(strings3)) //'pop'
+console.log(sumFirstChar(strings3)) //'pop'
 
 //7) scrivere una funzione che prende in input un array di numeri e restituisce il maggiore
 
