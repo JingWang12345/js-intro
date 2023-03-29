@@ -394,19 +394,19 @@
 
 //FORIN - per ciclare gli oggetti
 
-const andrea = {
-   name: 'andrea',
-   surname: 'asioli',
-   hasDog: true,
-   yob: 1978
-}
+// const andrea = {
+//    name: 'andrea',
+//    surname: 'asioli',
+//    hasDog: true,
+//    yob: 1978
+// }
 
-for (const key in andrea) {
-    if (Object.hasOwnProperty.call(andrea, key)) {
-        const value = andrea[key];
-        console.log(`andrea ha la proprieta ${key} associata al valore ${value}`);
-    }
-}
+// for (const key in andrea) {
+//     if (Object.hasOwnProperty.call(andrea, key)) {
+//         const value = andrea[key];
+//         console.log(`andrea ha la proprieta ${key} associata al valore ${value}`);
+//     }
+// }
 
 
 //--------------------------------------------------------------------
@@ -550,6 +550,23 @@ for (const key in andrea) {
 // }
 
 
+// function convertArrayInFizzBuzz2(array){
+//     const newArray = array.map((numbers) => {
+//         let risultato = '';
+//         if (numb % 3 === 0 && numb % 5 === 0) {
+//             risultato = 'FizzBuzz';
+//         } else if (numb % 3 === 0) {
+//             risultato = 'Fizz';
+//         } else if (numb % 5 === 0) {
+//             risultato = 'Buzz';
+//         } else {
+//             risultato += element;
+//         }
+//         return risultato;
+//     });
+//     return newArray;
+// }
+
 // console.log(convertArrayInFizzBuzz(numbers)) //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
 
 //2) scrivere una funzione che prende in input un array di numeri è restituisce un array di numeri in cui i positivi sono trasformati in negativi e viceversa (map)
@@ -569,6 +586,17 @@ for (const key in andrea) {
 //     }
 //     return tempArray;
 // }
+   
+// function invertElements(array){
+//     const newArray = array.map((numbers1) => {
+//         let risultato = 0;
+//         if (element !== 0) {
+//         risultato = element*-1;
+//      }
+//     });
+//     return newArray;
+// }
+
 
 
 // console.log(invertElements(numbers1)) //[3, -5, -15, 8, -12, -2, 0]
@@ -586,12 +614,14 @@ for (const key in andrea) {
 //     return tempArray;
 // }
 
+
+
 // console.log(lengthOfElements(strings)) //[5, 5, 3]
 
 
 //4) scrivere una funzione che prende in input un array di stringhe è restituisce solo quelle che contengono la lettera z (filter)
 
-// const strings2 = ['pippo', 'pluto', 'qui', 'zapotec'];
+const strings2 = ['pippo', 'pluto', 'qui', 'zapotec'];
 
 // function onlyElementsWithZ(array){
 //     const tempArray = [];
@@ -607,9 +637,19 @@ for (const key in andrea) {
 //         } 
 //         return tempArray;
 //     }
+function onlyElementsWithZ(array){
+    const newArray = array.filter((element) => {
+        let newArray = [strings2];
+        if (element.includes('z')) {
+                           
+            
+                          }
+                    });
+                    return newArray;
+                }
 
 
-// console.log(onlyElementsWithZ(strings2)) //['zapotec']
+console.log(onlyElementsWithZ(strings2)) //['zapotec']
 
 //5) scrivere una funzione che prende in input un array di numeri e restituisce tutti i numeri pari (filter)
 
