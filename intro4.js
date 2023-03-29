@@ -87,7 +87,7 @@
 //     email: 'danielepuggioni@gmail.com'
 //         }
 
-        
+
 // const francesco = {
 //     name: 'Francesco',
 //     surname: 'Badile',
@@ -96,7 +96,7 @@
 //     email: 'sunshinemocha@gmail.com'
 //         }
 
-        
+
 // const simone = {
 //     name: 'Simone',
 //     surname: 'Maccarone',
@@ -105,7 +105,7 @@
 //     email: 'simonemaccarone@gmail.com'
 //         }
 
-        
+
 // const luis = {
 //     name: 'Luis',
 //     surname: 'Castro',
@@ -114,7 +114,7 @@
 //     email: 'luis@gmail.com'
 //         }
 
-        
+
 // const pietro = {
 //     name: 'Pietro',
 //     surname: 'Villino',
@@ -123,7 +123,7 @@
 //     email: 'pietro@gmail.com'
 //         }
 
-        
+
 // const valentina = {
 //     name: 'Valentina',
 //     surname: 'Cherubini',
@@ -132,7 +132,7 @@
 //     email: 'dallila@gmail.com'
 //         }
 
-        
+
 // const vlad = {
 //     name: 'Vlad',
 //     surname: 'Invento',
@@ -159,7 +159,7 @@
 //     Email: ${personalbar.email}`
 //     console.log(description)
 
-    
+
 //     console.log('NOME: ' + person.name + ' ' + person.surname + ' (' + person.nickname + ')\n'
 //                 + 'ETA\': ' +(2023 -person.yob) + '\n'
 //                 +'EMAIL: ' + person.email)
@@ -184,7 +184,7 @@
 //     breed: arielloArray[1],
 //     gender: arielloArray[2],
 //     color: arielloArray[3],
-    
+
 // }
 //  console.log(arielloObj);
 
@@ -231,7 +231,7 @@
 // function make2Yearsolder(person) {
 //     person.yob = person.yob + 2;
 //     return person;
-    
+
 // }
 
 // let andrea = {name: 'Andrea', yob: 1978 }
@@ -248,7 +248,7 @@
 //     // let clone = {name: person.name, yob: person.yob};
 //     clone.yob = clone.yob +2;
 //     return clone;
-    
+
 // }
 
 // let simone = {name: 'simone', yob: 2003};
@@ -275,7 +275,7 @@
 //  console.log(titolo,autore);
 
 
- //---------------------------------------------------------------------
+//---------------------------------------------------------------------
 //JSON
 // const libro = {
 //       titolo: 'la divina commedia',
@@ -327,7 +327,7 @@
 //     const element = array[i];
 //     const risultato = element*2;
 //     tempArray.push(risultato);
-    
+
 //   }
 //   return tempArray;
 // }
@@ -349,6 +349,66 @@
 // }
 
 // console.log(sumAllElements(numbers)); //867
+//--------------------------------------------------------------------------------------------------------
+// TUTTI I CICLI IN JAVASCRIPT
+
+// const numbers = [9, 8, 7, 1, 2, 3];
+
+// //WHILE
+// let i = 0
+// while (i< numbers.length){
+//     const element = numbers[i];
+//     console.log(element);
+//     i++;
+
+// }
+// //FOR
+// for (let i = 0; i < numbers.length; i++) {
+//     const element = numbers[i];
+//     console.log(element);
+    
+// }
+// //DOWHILE
+// let j = 0
+// do{
+//     const element = numbers[j];
+//     console.log(element);
+//     j++;
+// }while (j<numbers.length);
+// //FOROF
+// for (const element of numbers) {
+//     console.log(element);
+// }
+// //FOREACH
+// numbers.forEach((element) => console.log(element));
+// //MAP
+// numbers.map((element) => element * 2)
+// //FILTER
+// numbers.filter((element) => element % 2 === 0)
+// //REDUCE
+// numbers.reduce((previosElement, currentElement) => previosElement + currentElement, 0);
+
+
+//  const Strings = ['qui','quo','qua'];
+// Strings.reduce((previosElement, currentElement)  => previosElement + currentElement, '');
+
+//FORIN - per ciclare gli oggetti
+
+const andrea = {
+   name: 'andrea',
+   surname: 'asioli',
+   hasDog: true,
+   yob: 1978
+}
+
+for (const key in andrea) {
+    if (Object.hasOwnProperty.call(andrea, key)) {
+        const value = andrea[key];
+        console.log(`andrea ha la proprieta ${key} associata al valore ${value}`);
+    }
+}
+
+
 //--------------------------------------------------------------------
 //ESERCIZIO
 
@@ -409,7 +469,7 @@
 //         }
 //     }
 //     return resultText.toUpperCase();
-    
+
 
 // }
 
@@ -472,16 +532,19 @@
 //     const tempArray = [];
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
+//         let risultato = '';
 //         if (element % 3 === 0 && element % 5 === 0) {
-//             console.log('FizzBuzz');
+//            risultato ='FizzBuzz';
 //         } else if (element % 3 === 0){
-//             console.log('Fizz');
+//             risultato ='Fizz';
 //         } else if (element % 5 === 0) {
-//             console.log('Buzz');
+//             risultato ='Buzz';
 //         } else {
-//             console.log(element);
-//         }
-   
+//             risultato = element;
+
+//         } 
+//         tempArray.push(risultato);
+
 //     }
 //     return tempArray;
 // }
@@ -497,7 +560,11 @@
 //     const tempArray = [];
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//         const risultato = element*-1;
+//         let risultato = 0;
+//         if (element !== 0) {
+//             risultato = element*-1;
+//         }
+
 //         tempArray.push(risultato);
 //     }
 //     return tempArray;
@@ -514,13 +581,12 @@
 //     const tempArray = [];
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-//         const risultato = element.length;
-//         tempArray.push(risultato);
+//         tempArray.push(element.length);
 //     }
 //     return tempArray;
 // }
 
-// console.log(lengthOfElements(strings)) //[4, 5, 3]
+// console.log(lengthOfElements(strings)) //[5, 5, 3]
 
 
 //4) scrivere una funzione che prende in input un array di stringhe è restituisce solo quelle che contengono la lettera z (filter)
@@ -531,9 +597,13 @@
 //     const tempArray = [];
 //         for (let i = 0; i < array.length; i++) {
 //             const element = array[i];
-//             if (z[Symbol.match]){
+//           //(element.indexOf('z) !== -1){
+//          //tempArray.push(element);
+//          // }
+//               if (element.includes('z')) {
 //                 tempArray.push(element);
-//             }
+
+//               }
 //         } 
 //         return tempArray;
 //     }
@@ -556,37 +626,61 @@
 //         return tempArray;
 // }
 
-// console.log(onlyEven(numbers2)) //[8, -12, -2, 0]
+// console.log(onlyEven(numbers2)) //[-8, 12, 2, 0]
 
 //6) scrivere una funzione che prende in input un array di stringhe restituisce una stringa composta dalle iniziali
 //(reduce)
-const strings3 = ['pippo', 'osvaldo', 'paperino'];
+// const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
-function sumFirstChar(array){
-    let tempArray = "";
-for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-   element = array.charAt(0);
-   tempArray +=array.charAt(0);
-}
-    }
-    return tempArray;
+// function sumFirstChar(array){
+//     let tempstring = "";
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         const firstChar = element[0];
+//         tempstring += firstChar;
 
-console.log(sumFirstChar(strings3)) //'pop'
+//     }
+//     return tempstring;
+// }
 
-//7) scrivere una funzione che prende in input un array di numeri e restituisce il maggiore
+// console.log(sumFirstChar(strings3)) //'pop'
+
+//7) scrivere una funzione che prende in input un array di numeri e restituisce il maggiore(reduce)
 
 // const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
 
-// function maxElement(array){
-//     let max = array[0]
-// for (let i = 1; i < array.length; i++) {
-//     const element = array[i];
-//     if (max < array[i]) {
-//         max = array[i]
+// function maxElement(array) {
+//     let tempNumber = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         if (tempNumber < element) {
+//             tempNumber = element;
+//         }
+       
 //     }
-    
-// } return max
+//     return tempNumber;
 // }
 
 // console.log(maxElement(numbers3)) //15
+
+//---------------soluzione 2 --------------------------
+
+//const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
+// const numbers4 = [-1,-4,-3];
+
+// function maxElement(array) {
+//     let tempNumber = array[0];
+//     for (let i = 1; i < array.length; i++) {
+//         const element = array[i];
+//         if (tempNumber < element) {
+//             tempNumber = element;
+//         }
+       
+//     }
+//     return tempNumber;
+// }
+
+// console.log(maxElement(numbers4))  //-1
+
+
+
