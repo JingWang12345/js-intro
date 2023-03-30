@@ -700,20 +700,18 @@ const strings3 = ['pippo', 'osvaldo', 'paperino'];
 //     }
 //     return tempstring;
 // }
-function sumFirstChar(array){
-    const newArray = array.reduce((strings3, stringsNow ) => {
-    let risultato = "";
-    risultato= strings3[0]+stringsNow[0],'';
-    
-   
-     return risultato;
-    });
+function sumFirstChar1(array){
+    const newArray = array.reduce((previous, current) => {
+        const firstChar = current[0];
+        previous += firstChar;
+    return previous;
+    },"");
     return newArray;
 }
 
 
 
-console.log(sumFirstChar(strings3)) //'pop'
+console.log(sumFirstChar1(strings3)) //'pop'
 
 //7) scrivere una funzione che prende in input un array di numeri e restituisce il maggiore(reduce)
 
@@ -750,14 +748,14 @@ const numbers4 = [-3, 5, 15, -8, 12, 2, 0];
 //     return tempNumber;
 // }
 function maxElement(array){
-    const newArray = array.reduce((numbers4) => {
-    let risultato = array[0];
-    if ( risultato< numbers4) {
-    risultato = numbers4;
-}
-    return risultato;
-    });
-    return newArray;
+    return array.reduce((previous, current) => {
+    if(previous < current){ 
+        return current;
+    }else { 
+        return previous;
+    }
+    }, -Infinity);
+    
 }
 
 
