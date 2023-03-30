@@ -525,7 +525,7 @@
 
 //1) scrivere una funzione che prende in input un array di numeri è restituisce un array di stringhe in logica FizzBuzz (map)
 
-// const numbers = [3, 5, 15, 8, 12, 2];
+const numbers = [3, 5, 15, 8, 12, 2];
 
 // function convertArrayInFizzBuzz(array){
 
@@ -550,28 +550,28 @@
 // }
 
 
-// function convertArrayInFizzBuzz2(array){
-//     const newArray = array.map((numbers) => {
-//         let risultato = '';
-//         if (numb % 3 === 0 && numb % 5 === 0) {
-//             risultato = 'FizzBuzz';
-//         } else if (numb % 3 === 0) {
-//             risultato = 'Fizz';
-//         } else if (numb % 5 === 0) {
-//             risultato = 'Buzz';
-//         } else {
-//             risultato += element;
-//         }
-//         return risultato;
-//     });
-//     return newArray;
-// }
+function convertArrayInFizzBuzz2(array){
+    const newArray = array.map((numbers) => {
+        let risultato = '';
+        if (numbers % 3 === 0 && numbers % 5 === 0) {
+            risultato = 'FizzBuzz';
+        } else if (numbers % 3 === 0) {
+            risultato = 'Fizz';
+        } else if (numbers % 5 === 0) {
+            risultato = 'Buzz';
+        } else {
+            risultato += numbers;
+        }
+        return risultato;
+    });
+    return newArray;
+}
 
-// console.log(convertArrayInFizzBuzz(numbers)) //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
+console.log(convertArrayInFizzBuzz2(numbers)) //['Fizz', 'Buzz', 'FizzBuzz', '8', 'Fizz', '2']
 
 //2) scrivere una funzione che prende in input un array di numeri è restituisce un array di numeri in cui i positivi sono trasformati in negativi e viceversa (map)
 
-// const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
+const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
 
 // function invertElements(array){
 //     const tempArray = [];
@@ -587,23 +587,24 @@
 //     return tempArray;
 // }
    
-// function invertElements(array){
-//     const newArray = array.map((numbers1) => {
-//         let risultato = 0;
-//         if (element !== 0) {
-//         risultato = element*-1;
-//      }
-//     });
-//     return newArray;
-// }
+function invertElements(array){
+    const newArray = array.map((numbers1) => {
+        let risultato = 0;
+        if (numbers1 !== 0) {
+        risultato = numbers1*-1;
+     }
+     return risultato;
+    });
+    return newArray;
+}
 
 
 
-// console.log(invertElements(numbers1)) //[3, -5, -15, 8, -12, -2, 0]
+console.log(invertElements(numbers1)) //[3, -5, -15, 8, -12, -2, 0]
 
 //3) scrivere una funzione che prende in input un array di stringhe è restituisce un array di numeri con la lunghezza delle stringhe (map)
 
-// const strings = ['pippo', 'pluto', 'qui'];
+const strings = ['pippo', 'pluto', 'qui'];
 
 // function lengthOfElements(array){
 //     const tempArray = [];
@@ -613,10 +614,17 @@
 //     }
 //     return tempArray;
 // }
+function lengthOfElements(array){
+    const newArray = array.map((strings) => {
+    let risultato = [];
+     risultato =strings.length;
+     return risultato;
+    });
+    return newArray;
+}
 
 
-
-// console.log(lengthOfElements(strings)) //[5, 5, 3]
+console.log(lengthOfElements(strings)) //[5, 5, 3]
 
 
 //4) scrivere una funzione che prende in input un array di stringhe è restituisce solo quelle che contengono la lettera z (filter)
@@ -637,23 +645,23 @@ const strings2 = ['pippo', 'pluto', 'qui', 'zapotec'];
 //         } 
 //         return tempArray;
 //     }
-function onlyElementsWithZ(array){
-    const newArray = array.filter((element) => {
-        let newArray = [strings2];
-        if (element.includes('z')) {
-                           
-            
-                          }
-                    });
-                    return newArray;
-                }
 
+function onlyElementsWithZ(array){
+    const newArray = array.filter((strings2) => {
+    let risultato = [];
+   if ( strings2.includes('z'))  {
+    return risultato;
+   }
+     
+    });
+    return newArray;
+}
 
 console.log(onlyElementsWithZ(strings2)) //['zapotec']
 
 //5) scrivere una funzione che prende in input un array di numeri e restituisce tutti i numeri pari (filter)
 
-// const numbers2 = [-3, 5, 15, -8, 12, 2, 0];
+const numbers2 = [-3, 5, 15, -8, 12, 2, 0];
 
 // function onlyEven(array){
 //     const tempArray = [];
@@ -665,12 +673,22 @@ console.log(onlyElementsWithZ(strings2)) //['zapotec']
 //         } 
 //         return tempArray;
 // }
+function onlyEven(array){
+    const newArray = array.filter((numbers2) => {
+    let risultato = [];
+   if ( numbers2 % 2 === 0)  {
+    return risultato;
+   }
+     
+    });
+    return newArray;
+}
 
-// console.log(onlyEven(numbers2)) //[-8, 12, 2, 0]
+console.log(onlyEven(numbers2)) //[-8, 12, 2, 0]
 
 //6) scrivere una funzione che prende in input un array di stringhe restituisce una stringa composta dalle iniziali
 //(reduce)
-// const strings3 = ['pippo', 'osvaldo', 'paperino'];
+const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
 // function sumFirstChar(array){
 //     let tempstring = "";
@@ -682,8 +700,20 @@ console.log(onlyElementsWithZ(strings2)) //['zapotec']
 //     }
 //     return tempstring;
 // }
+function sumFirstChar(array){
+    const newArray = array.reduce((strings3, stringsNow ) => {
+    let risultato = "";
+    risultato= strings3[0]+stringsNow[0],'';
+    
+   
+     return risultato;
+    });
+    return newArray;
+}
 
-// console.log(sumFirstChar(strings3)) //'pop'
+
+
+console.log(sumFirstChar(strings3)) //'pop'
 
 //7) scrivere una funzione che prende in input un array di numeri e restituisce il maggiore(reduce)
 
@@ -705,7 +735,7 @@ console.log(onlyElementsWithZ(strings2)) //['zapotec']
 
 //---------------soluzione 2 --------------------------
 
-//const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
+const numbers4 = [-3, 5, 15, -8, 12, 2, 0];
 // const numbers4 = [-1,-4,-3];
 
 // function maxElement(array) {
@@ -719,8 +749,19 @@ console.log(onlyElementsWithZ(strings2)) //['zapotec']
 //     }
 //     return tempNumber;
 // }
+function maxElement(array){
+    const newArray = array.reduce((numbers4) => {
+    let risultato = array[0];
+    if ( risultato< numbers4) {
+    risultato = numbers4;
+}
+    return risultato;
+    });
+    return newArray;
+}
 
-// console.log(maxElement(numbers4))  //-1
+
+console.log(maxElement(numbers4))  //-1
 
 
 
